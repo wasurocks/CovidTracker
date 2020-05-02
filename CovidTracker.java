@@ -9,10 +9,18 @@ public class CovidTracker {
 	public static void getInfected(String csvName) throws FileNotFoundException {
 		Scanner sc = new Scanner(new File(csvName));
 
-		int i = 0;
+		int i = 0, j = 0;
 
-		while (sc.hasNextLine()) i++;
+		while (sc.hasNextLine()) {
+			if (i == 0) j = sc.nextLine().length;
+			else sc.nextLine();
+			i++;
+		}
 		sc.close();
+
+		System.out.print(i);
+		System.out.print(" ");
+		System.out.print(j);
 
 		sc = new Scanner(new File(csvName));
 
