@@ -1,15 +1,18 @@
 import java.util.Scanner;
-import java.io.File;
+import java.io.*;
 
 public class CovidTracker {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		String csvName = "data.csv";
-
+		getInfected(csvName);
 	}
-	public static String[] getInfected(String csvName) {
+	public static void getInfected(String csvName) throws FileNotFoundException {
 		Scanner sc = new Scanner(new File(csvName));
 		sc.useDelimiter(",");
-		while (sc.hasNext()) System.out.print(sc.nextLine());
+		while (sc.hasNextLine()) {
+			System.out.println(sc.nextLine());
+			System.out.println();
+		}
 		sc.close();
 	}
 }
