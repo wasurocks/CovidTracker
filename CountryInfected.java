@@ -3,7 +3,7 @@ public class CountryInfected {
 	private int[] infected;
 	
 	// Constructor	
-	public CountryInfected(country, infected) {
+	public CountryInfected(String country, int[] infected) {
 		this.country = country;
 		this.infected = infected;
 	}
