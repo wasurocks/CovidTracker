@@ -7,4 +7,14 @@ public class CountryInfected {
 		this.country = country;
 		this.infected = infected;
 	}
+
+	// Getter
+	public int[] getInfected() {
+		return this.infected;
+	}
+
+	// Getter
+	public String getCountry() {
+		return this.country;
+	}
 }
